@@ -6,7 +6,7 @@ use Epeiros\Http\Request;
 
 require __DIR__ . '/../src/autoload.php';
 
-$configData  = require(__DIR__ . '/../src/configuration/epeirosConfig.php');
+$configData  = require(__DIR__ . '/../src/configuration/config.php');
 
 $config = new AppConfig($configData);
 
