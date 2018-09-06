@@ -1,0 +1,48 @@
+[EXCEPTION] 0: 
+Trace:#0 /Users/tdacosta/repos/epeiros/src/http/Response/Content/Contents/JsonContent.php(19): Epeiros\Http\JsonContent->ensureIsValidJson('Not Found')
+#1 /Users/tdacosta/repos/epeiros/src/application/Query/Queries/NotFoundQuery.php(15): Epeiros\Http\JsonContent->__construct('Not Found')
+#2 /Users/tdacosta/repos/epeiros/src/http/GetRequestHandler.php(51): Epeiros\Query\NotFoundQuery->execute()
+#3 /Users/tdacosta/repos/epeiros/src/application/Application.php(36): Epeiros\Http\GetRequestHandler->handle(Object(Epeiros\Http\GetRequest))
+#4 /Users/tdacosta/repos/epeiros/public/index.php(19): Epeiros\Application->run(Object(Epeiros\Http\GetRequest))
+#5 /Users/tdacosta/repos/epeiros/src/server.php(34): require('/Users/tdacosta...')
+#6 {main}
+[EXCEPTION] 0: 
+Trace:#0 /Users/tdacosta/repos/epeiros/src/http/Response/Content/Contents/JsonContent.php(19): Epeiros\Http\JsonContent->ensureIsValidJson('Not Found')
+#1 /Users/tdacosta/repos/epeiros/src/application/Query/Queries/NotFoundQuery.php(15): Epeiros\Http\JsonContent->__construct('Not Found')
+#2 /Users/tdacosta/repos/epeiros/src/http/GetRequestHandler.php(51): Epeiros\Query\NotFoundQuery->execute()
+#3 /Users/tdacosta/repos/epeiros/src/application/Application.php(36): Epeiros\Http\GetRequestHandler->handle(Object(Epeiros\Http\GetRequest))
+#4 /Users/tdacosta/repos/epeiros/public/index.php(19): Epeiros\Application->run(Object(Epeiros\Http\GetRequest))
+#5 /Users/tdacosta/repos/epeiros/src/server.php(34): require('/Users/tdacosta...')
+#6 {main}
+[EXCEPTION] 0: 
+Trace:#0 /Users/tdacosta/repos/epeiros/src/http/Response/Content/Contents/JsonContent.php(19): Epeiros\Http\JsonContent->ensureIsValidJson(Array)
+#1 /Users/tdacosta/repos/epeiros/src/application/Query/Queries/NotFoundQuery.php(15): Epeiros\Http\JsonContent->__construct(Array)
+#2 /Users/tdacosta/repos/epeiros/src/http/GetRequestHandler.php(51): Epeiros\Query\NotFoundQuery->execute()
+#3 /Users/tdacosta/repos/epeiros/src/application/Application.php(36): Epeiros\Http\GetRequestHandler->handle(Object(Epeiros\Http\GetRequest))
+#4 /Users/tdacosta/repos/epeiros/public/index.php(19): Epeiros\Application->run(Object(Epeiros\Http\GetRequest))
+#5 /Users/tdacosta/repos/epeiros/src/server.php(34): require('/Users/tdacosta...')
+#6 {main}
+[EXCEPTION] 0: 
+Trace:#0 /Users/tdacosta/repos/epeiros/src/http/Response/Content/Contents/JsonContent.php(19): Epeiros\Http\JsonContent->ensureIsValidJson(Array)
+#1 /Users/tdacosta/repos/epeiros/src/application/Query/Queries/NotFoundQuery.php(15): Epeiros\Http\JsonContent->__construct(Array)
+#2 /Users/tdacosta/repos/epeiros/src/http/GetRequestHandler.php(51): Epeiros\Query\NotFoundQuery->execute()
+#3 /Users/tdacosta/repos/epeiros/src/application/Application.php(36): Epeiros\Http\GetRequestHandler->handle(Object(Epeiros\Http\GetRequest))
+#4 /Users/tdacosta/repos/epeiros/public/index.php(19): Epeiros\Application->run(Object(Epeiros\Http\GetRequest))
+#5 /Users/tdacosta/repos/epeiros/src/server.php(34): require('/Users/tdacosta...')
+#6 {main}
+[EXCEPTION] 0: 
+Trace:#0 /Users/tdacosta/repos/epeiros/src/http/Response/Content/Contents/JsonContent.php(19): Epeiros\Http\JsonContent->ensureIsValidJson(''Not Found'')
+#1 /Users/tdacosta/repos/epeiros/src/application/Query/Queries/NotFoundQuery.php(15): Epeiros\Http\JsonContent->__construct(''Not Found'')
+#2 /Users/tdacosta/repos/epeiros/src/http/GetRequestHandler.php(51): Epeiros\Query\NotFoundQuery->execute()
+#3 /Users/tdacosta/repos/epeiros/src/application/Application.php(36): Epeiros\Http\GetRequestHandler->handle(Object(Epeiros\Http\GetRequest))
+#4 /Users/tdacosta/repos/epeiros/public/index.php(19): Epeiros\Application->run(Object(Epeiros\Http\GetRequest))
+#5 /Users/tdacosta/repos/epeiros/src/server.php(34): require('/Users/tdacosta...')
+#6 {main}
+[EXCEPTION] 0: 
+Trace:#0 /Users/tdacosta/repos/epeiros/src/http/Response/Content/Contents/JsonContent.php(19): Epeiros\Http\JsonContent->ensureIsValidJson(''Not Found'')
+#1 /Users/tdacosta/repos/epeiros/src/application/Query/Queries/NotFoundQuery.php(15): Epeiros\Http\JsonContent->__construct(''Not Found'')
+#2 /Users/tdacosta/repos/epeiros/src/http/GetRequestHandler.php(51): Epeiros\Query\NotFoundQuery->execute()
+#3 /Users/tdacosta/repos/epeiros/src/application/Application.php(36): Epeiros\Http\GetRequestHandler->handle(Object(Epeiros\Http\GetRequest))
+#4 /Users/tdacosta/repos/epeiros/public/index.php(19): Epeiros\Application->run(Object(Epeiros\Http\GetRequest))
+#5 /Users/tdacosta/repos/epeiros/src/server.php(34): require('/Users/tdacosta...')
+#6 {main}
