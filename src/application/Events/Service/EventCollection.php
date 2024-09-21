@@ -1,7 +1,7 @@
 <?php
-namespace Epeiros\Events;
+namespace Vortextangent\Epeiros\Events;
 
-use Epeiros\Library\AbstractCollection;
+use Vortextangent\Epeiros\Library\AbstractCollection;
 
 class EventCollection extends AbstractCollection
 {

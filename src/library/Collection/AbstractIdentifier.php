@@ -1,6 +1,6 @@
 <?php
 
-namespace Epeiros\Library;
+namespace Vortextangent\Epeiros\Library;
 
 abstract class AbstractIdentifier extends StringValueObject implements CollectionElementIdentifier
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Library\InvalidArgumentException;
+use Vortextangent\Epeiros\Library\InvalidArgumentException;
 
 class SessionId
 {

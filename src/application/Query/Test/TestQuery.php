@@ -1,13 +1,13 @@
 <?php
 
-namespace Epeiros\Query;
+namespace Vortextangent\Epeiros\Query;
 
-use Epeiros\Factory;
-use Epeiros\Http\ContentResponse;
-use Epeiros\Http\JsonContent;
-use Epeiros\Http\OkStatusHeader;
-use Epeiros\Http\Query;
-use Epeiros\Http\Response;
+use Vortextangent\Epeiros\Factory;
+use Vortextangent\Epeiros\Http\ContentResponse;
+use Vortextangent\Epeiros\Http\JsonContent;
+use Vortextangent\Epeiros\Http\OkStatusHeader;
+use Vortextangent\Epeiros\Http\Query;
+use Vortextangent\Epeiros\Http\Response;
 
 class TestQuery implements Query
 {
@@ -27,13 +27,10 @@ class TestQuery implements Query
         $this->factory = $factory;
     }
 
-    /**
-     * @return Response
-     */
-    public function execute()
+    public function execute(): Response
     {
-        $content  = json_encode([
-            'status'  => 'ok',
+        $content = json_encode([
+            'status' => 'ok',
             'message' => 'Hello World.',
         ]);
         return new ContentResponse(new OkStatusHeader(), new JsonContent($content));

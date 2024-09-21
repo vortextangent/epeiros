@@ -7,10 +7,10 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
-                'epeiros\\dbunitarraydataset' => '/helpers/databaseTesting/DbUnitArrayDataSet.php',
-                'epeiros\\gettertestgenerator' => '/generators/GetterTestGenerator.php',
-                'epeiros\\http\\headertesthelper' => '/helpers/HeaderTestHelper.php',
-                'epeiros\\http\\setcookietesthelper' => '/helpers/SetCookieTestHelper.php'
+                'vortextangent\\epeiros\\dbunitarraydataset' => '/helpers/databaseTesting/DbUnitArrayDataSet.php',
+                'vortextangent\\epeiros\\gettertestgenerator' => '/generators/GetterTestGenerator.php',
+                'vortextangent\\epeiros\\http\\headertesthelper' => '/helpers/HeaderTestHelper.php',
+                'vortextangent\\epeiros\\http\\setcookietesthelper' => '/helpers/SetCookieTestHelper.php'
             );
         }
         $cn = strtolower($class);

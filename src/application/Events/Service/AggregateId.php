@@ -1,7 +1,7 @@
 <?php
-namespace Epeiros\Events;
+namespace Vortextangent\Epeiros\Events;
 
-use Epeiros\Library\UUID;
+use Vortextangent\Epeiros\Library\UUID;
 
 class AggregateId extends UUID
 {

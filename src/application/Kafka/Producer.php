@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Events\Event;
-use Epeiros\Events\EventSerializer;
+use Vortextangent\Epeiros\Events\Event;
+use Vortextangent\Epeiros\Events\EventSerializer;
 
 class Producer
 {

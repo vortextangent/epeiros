@@ -46,3 +46,16 @@ Trace:#0 /Users/tdacosta/repos/epeiros/src/http/Response/Content/Contents/JsonCo
 #4 /Users/tdacosta/repos/epeiros/public/index.php(19): Epeiros\Application->run(Object(Epeiros\Http\GetRequest))
 #5 /Users/tdacosta/repos/epeiros/src/server.php(34): require('/Users/tdacosta...')
 #6 {main}
+[EXCEPTION] 1045: SQLSTATE[HY000] [1045] Access denied for user 'anthony_da_costa_readonly'@'35.169.163.107' (using password: YES)
+Trace:#0 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/DatabaseConnection.php(16): PDO->__construct('mysql:host=acco...', 'anthony_da_cost...', Object(SensitiveParameterValue), Array)
+#1 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/AppConfig.php(18): Vortextangent\Epeiros\DatabaseConnection::getInstance(Array)
+#2 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/Factory.php(44): Vortextangent\Epeiros\AppConfig->database()
+#3 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/Factory.php(139): Vortextangent\Epeiros\Factory->createDatabaseConnection()
+#4 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/Factory.php(134): Vortextangent\Epeiros\Factory->createSchemaLoader()
+#5 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/Factory.php(39): Vortextangent\Epeiros\Factory->createSchemaMapper()
+#6 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/Query/DescribeDatabase/SchemaQuery.php(26): Vortextangent\Epeiros\Factory->createDatabaseRepository()
+#7 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/http/GetRequestHandler.php(26): Vortextangent\Epeiros\Query\DescribeDatabase\SchemaQuery->execute()
+#8 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/application/Application.php(36): Vortextangent\Epeiros\Http\GetRequestHandler->handle(Object(Vortextangent\Epeiros\Http\GetRequest))
+#9 /Users/anthony.dacosta/repos/vortextangent/epeiros/public/index.php(20): Vortextangent\Epeiros\Application->run(Object(Vortextangent\Epeiros\Http\GetRequest))
+#10 /Users/anthony.dacosta/repos/vortextangent/epeiros/src/server.php(34): require('/Users/anthony....')
+#11 {main}

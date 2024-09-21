@@ -1,5 +1,5 @@
 <?php
-namespace Epeiros\Library;
+namespace Vortextangent\Epeiros\Library;
 
 class IllegalStateTransitionException extends LogicException
 {

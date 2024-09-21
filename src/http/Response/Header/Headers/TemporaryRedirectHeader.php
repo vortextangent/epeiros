@@ -1,5 +1,5 @@
 <?php
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
 class TemporaryRedirectHeader implements Header
 {

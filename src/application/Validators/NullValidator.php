@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Result;
-use Epeiros\SuccessfulResult;
+use Vortextangent\Epeiros\Result;
+use Vortextangent\Epeiros\SuccessfulResult;
 
 class NullValidator implements Validator
 {

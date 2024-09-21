@@ -1,10 +1,10 @@
 <?php
 
-namespace Epeiros\Events;
+namespace Vortextangent\Epeiros\Events;
 
-use Epeiros\Library\InvalidArgumentException;
-use Epeiros\Library\RuntimeException;
-use Epeiros\Library\UUID;
+use Vortextangent\Epeiros\Library\InvalidArgumentException;
+use Vortextangent\Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\Library\UUID;
 use mysqli;
 use mysqli_stmt;
 

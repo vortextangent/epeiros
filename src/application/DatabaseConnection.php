@@ -1,15 +1,15 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
 use PDO;
 
 class DatabaseConnection
 {
 
-    private static $db;
+    private static ?PDO $db = null;
 
-    public static function getInstance(array $database)
+    public static function getInstance(array $database): PDO
     {
         if (null === static::$db) {
             $databaseConfiguration = new DatabaseConfiguration($database);

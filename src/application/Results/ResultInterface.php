@@ -1,6 +1,6 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
 interface ResultInterface
 {

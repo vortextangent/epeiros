@@ -1,5 +1,5 @@
 {
-  "name": "Eperios",
+  "name": "vortextangent/eperios",
   "description": "Event based CQRS Framework",
   "license": "Closed",
   "authors": [
@@ -9,16 +9,20 @@
       "role": "Developer"
     }
   ],
+  "platform": {
+    "php": "8.3"
+  },
   "require": {
-    "lcobucci/jwt": "^3.2.0",
-    "predis/predis": "1.0.3",
-    "nmred/kafka-php": "0.1.*",
-    "templado/engine": "^2.0",
-    "josegonzalez/dotenv": "^3.2"
+    "lcobucci/jwt": "^5.3.0",
+    "predis/predis": "^2.2",
+    "templado/engine": "^4.0",
+    "josegonzalez/dotenv": "^4.0",
+    "ext-pdo": "*",
+    "ext-mysqli": "*",
+    "ext-json": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "^6.2",
-    "kwn/php-rdkafka-stubs": "^1.0.2",
-    "templado/cli": "^0.3.0"
+    "phpunit/phpunit": "^11",
+    "kwn/php-rdkafka-stubs": "^2.2"
   }
 }

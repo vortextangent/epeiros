@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Library\AbstractIdentifier;
+use Vortextangent\Epeiros\Library\AbstractIdentifier;
 
 class ParameterIdentifier extends AbstractIdentifier
 {

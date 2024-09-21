@@ -1,12 +1,12 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\FileName;
-use Epeiros\Filesize;
-use Epeiros\Library\AbstractCollection;
-use Epeiros\Library\NotFoundInCollectionException;
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\FileName;
+use Vortextangent\Epeiros\Filesize;
+use Vortextangent\Epeiros\Library\AbstractCollection;
+use Vortextangent\Epeiros\Library\NotFoundInCollectionException;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class UploadFileCollection extends AbstractCollection
 {

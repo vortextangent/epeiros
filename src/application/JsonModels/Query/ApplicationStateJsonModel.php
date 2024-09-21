@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros\Query;
+namespace Vortextangent\Epeiros\Query;
 
-use Epeiros\App\ApplicationState;
-use Epeiros\Http\JsonModel;
+use Vortextangent\Epeiros\App\ApplicationState;
+use Vortextangent\Epeiros\Http\JsonModel;
 
 class ApplicationStateJsonModel extends JsonModel
 {

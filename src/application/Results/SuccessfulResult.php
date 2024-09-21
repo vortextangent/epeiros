@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Http\JsonData;
+use Vortextangent\Epeiros\Http\JsonData;
 
 class SuccessfulResult
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class DatabaseConfiguration
 {

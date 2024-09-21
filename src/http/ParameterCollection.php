@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Library\AbstractCollection;
+use Vortextangent\Epeiros\Library\AbstractCollection;
 
 class ParameterCollection extends AbstractCollection
 {

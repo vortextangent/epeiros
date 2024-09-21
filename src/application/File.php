@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
 use finfo;
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class File
 {

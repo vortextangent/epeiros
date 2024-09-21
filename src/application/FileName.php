@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Library\InvalidArgumentException;
+use Vortextangent\Epeiros\Library\InvalidArgumentException;
 
 class FileName
 {

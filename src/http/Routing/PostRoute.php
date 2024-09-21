@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Library\RoutingException;
+use Vortextangent\Epeiros\Library\RoutingException;
 
 abstract class PostRoute extends AbstractRoute implements Route
 {

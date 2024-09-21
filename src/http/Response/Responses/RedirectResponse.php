@@ -1,6 +1,6 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
 class RedirectResponse extends AbstractResponse
 {

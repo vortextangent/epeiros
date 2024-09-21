@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros\library;
+namespace Vortextangent\Epeiros\library;
 
-use Epeiros\Http\ParameterCollection;
-use Epeiros\Http\Path;
+use Vortextangent\Epeiros\Http\ParameterCollection;
+use Vortextangent\Epeiros\Http\Path;
 
 class Url
 {

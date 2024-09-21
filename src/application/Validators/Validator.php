@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\ResultInterface;
+use Vortextangent\Epeiros\ResultInterface;
 
 interface Validator
 {

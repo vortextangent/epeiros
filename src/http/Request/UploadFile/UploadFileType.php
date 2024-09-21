@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Library\StringValueObject;
+use Vortextangent\Epeiros\Library\StringValueObject;
 
 class UploadFileType extends StringValueObject
 {

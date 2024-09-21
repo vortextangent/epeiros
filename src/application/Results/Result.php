@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Http\JsonData;
-use Epeiros\Http\JsonError;
+use Vortextangent\Epeiros\Http\JsonData;
+use Vortextangent\Epeiros\Http\JsonError;
 
 abstract class Result
 {

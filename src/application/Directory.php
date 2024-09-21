@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Library\InvalidPathException;
-use Epeiros\Library\InvalidArgumentException;
+use Vortextangent\Epeiros\Library\InvalidPathException;
+use Vortextangent\Epeiros\Library\InvalidArgumentException;
 
 class Directory
 {

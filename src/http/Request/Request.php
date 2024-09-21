@@ -1,8 +1,8 @@
 <?php
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Library\NotFoundInCollectionException;
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\Library\NotFoundInCollectionException;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class Request
 {

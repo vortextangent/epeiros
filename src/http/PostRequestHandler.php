@@ -1,10 +1,10 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\AccessController;
-use Epeiros\Factory;
-use Epeiros\Library\RoutingException;
+use Vortextangent\Epeiros\AccessController;
+use Vortextangent\Epeiros\Factory;
+use Vortextangent\Epeiros\Library\RoutingException;
 
 class PostRequestHandler implements RequestHandler
 {
@@ -35,7 +35,7 @@ class PostRequestHandler implements RequestHandler
      * @param Request $request
      *
      * @return Response
-     * @throws \Epeiros\Library\RoutingException
+     * @throws RoutingException
      */
     public function handle(Request $request)
     {

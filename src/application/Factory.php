@@ -1,56 +1,50 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Events\EventSerializer;
-use Epeiros\Events\MySqliEventStore;
-use Epeiros\Http\GetRequestHandler;
-use Epeiros\Http\GetRouter;
-use Epeiros\Http\NullValidator;
-use Epeiros\Http\ParameterCollection;
-use Epeiros\Http\Path;
-use Epeiros\Http\PostRequestHandler;
-use Epeiros\Http\PostRouter;
-use Epeiros\Http\Request;
-use Epeiros\Http\RequestHandlerLocator;
-use Epeiros\Http\Validator;
-use Epeiros\Query\NotFoundQuery;
-use Epeiros\Query\NotFoundRoute;
-use Epeiros\Query\RedirectQuery;
-use Epeiros\Query\TestQuery;
-use Epeiros\Query\TestRoute;
-use mysqli;
+use PDO;
+use Vortextangent\Epeiros\Events\EventSerializer;
+use Vortextangent\Epeiros\Events\MySqliEventStore;
+use Vortextangent\Epeiros\Http\GetRequestHandler;
+use Vortextangent\Epeiros\Http\GetRouter;
+use Vortextangent\Epeiros\Http\NullValidator;
+use Vortextangent\Epeiros\Http\ParameterCollection;
+use Vortextangent\Epeiros\Http\Path;
+use Vortextangent\Epeiros\Http\PostRequestHandler;
+use Vortextangent\Epeiros\Http\PostRouter;
+use Vortextangent\Epeiros\Http\Request;
+use Vortextangent\Epeiros\Http\RequestHandlerLocator;
+use Vortextangent\Epeiros\Http\Validator;
+use Vortextangent\Epeiros\Library\Schema\SchemaLoader;
+use Vortextangent\Epeiros\Library\Schema\SchemaMapper;
+use Vortextangent\Epeiros\Library\Schema\SchemaRepository;
+use Vortextangent\Epeiros\Query\DescribeDatabase\SchemaRoute;
+use Vortextangent\Epeiros\Query\NotFoundQuery;
+use Vortextangent\Epeiros\Query\NotFoundRoute;
+use Vortextangent\Epeiros\Query\TestQuery;
+use Vortextangent\Epeiros\Query\TestRoute;
 
 class Factory
 {
 
-    /**
-     * @var AppConfig
-     */
-    private $config;
+    private AppConfig $config;
 
-    /**
-     * @param AppConfig $config
-     */
     public function __construct(AppConfig $config)
     {
         $this->config = $config;
     }
 
-    /**
-     * @return mysqli
-     */
-    public function createDatabaseConnection()
+    public function createDatabaseRepository(): SchemaRepository
+    {
+        return new SchemaRepository($this->createSchemaMapper());
+    }
+
+    private function createDatabaseConnection(): PDO
     {
         return $this->config->database();
     }
 
-    /**
-     * @param $request
-     *
-     * @return Validator
-     */
-    public function createValidator(Request $request)
+    public function createValidator(Request $request): Validator
     {
         switch ($request->getPath()->asString()) {
             default:
@@ -61,114 +55,66 @@ class Factory
         return $validator;
     }
 
-    /**
-     * @return RequestHandlerLocator
-     */
-    public function createRequestHandlerLocator()
+    public function createRequestHandlerLocator(): RequestHandlerLocator
     {
         return new RequestHandlerLocator($this);
     }
 
-    public function createNotFoundQuery(ParameterCollection $parameters)
+    public function createNotFoundQuery(Path $path, ParameterCollection $parameters): NotFoundQuery
     {
-        return new NotFoundQuery($parameters);
+        return new NotFoundQuery($path, $parameters);
     }
 
-    /**
-     * @return Application
-     */
-    public function createApplication()
+    public function createApplication(): Application
     {
         return new Application($this);
     }
 
-    /**
-     * @return NotFoundRoute
-     */
-    public function createNotFoundRoute()
+    public function createNotFoundRoute(): NotFoundRoute
     {
         return new NotFoundRoute($this);
     }
 
-    /**
-     * @param Path $path
-     * @param ParameterCollection|null $parameters
-     *
-     * @return RedirectQuery
-     */
-    public function createRedirectQuery(
-        Path $path,
-        ParameterCollection $parameters = null
-    ) {
-        return new RedirectQuery($path, $parameters);
-    }
-
-    /**
-     * @return RedirectQuery
-     */
-    public function createRedirectToNotFoundQuery()
+    public function createTestQuery(): TestQuery
     {
-        return $this->createRedirectQuery(new Path('/error'));
-    }
-
-    public function createTestQuery() {
         return new TestQuery($this);
     }
 
-    /**
-     * @return MySqliEventStore
-     */
-    private function createMysqlEventStore()
+    private function createMysqlEventStore(): MySqliEventStore
     {
         return new MySqliEventStore($this->createDatabaseConnection());
     }
 
-    /**
-     * @param Request $request
-     *
-     * @return GetRequestHandler
-     */
-    public function createGetRequestHandler(Request $request)
+    public function createGetRequestHandler(Request $request): GetRequestHandler
     {
         return new GetRequestHandler($this->createGetRouter(), $this);
     }
 
-    /**
-     * @param Request $request
-     *
-     * @return PostRequestHandler
-     */
-    public function createPostRequestHandler(Request $request)
+    public function createPostRequestHandler(Request $request): PostRequestHandler
     {
         return new PostRequestHandler($this->createPostRouter(), $this);
     }
 
-    /**
-     * @return GetRouter
-     */
-    public function createGetRouter()
+    public function createGetRouter(): GetRouter
     {
         $router = new GetRouter;
         $router->add($this->createTestRoute());
+        $router->add($this->createSchemaRoute());
+
+        // Last
         $router->add($this->createNotFoundRoute());
 
         return $router;
     }
 
-    /**
-     * @return PostRouter
-     */
-    public function createPostRouter()
+    public function createPostRouter(): PostRouter
     {
         $router = new PostRouter;
 
         return $router;
     }
 
-    /**
-     * @return Producer
-     */
-    private function createProducer()
+    private function createProducer(): Producer
     {
         return new Producer($this->config->kafkaBrokers(), $this->config->kafkaServiceName(), new EventSerializer());
     }
@@ -176,5 +122,20 @@ class Factory
     private function createTestRoute()
     {
         return new TestRoute($this);
+    }
+
+    private function createSchemaRoute(): SchemaRoute
+    {
+        return new SchemaRoute($this);
+    }
+
+    private function createSchemaMapper(): SchemaMapper
+    {
+        return new SchemaMapper($this->createSchemaLoader());
+    }
+
+    private function createSchemaLoader(): SchemaLoader
+    {
+        return new SchemaLoader($this->createDatabaseConnection());
     }
 }

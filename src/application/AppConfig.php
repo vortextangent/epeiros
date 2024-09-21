@@ -1,29 +1,19 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use mysqli;
+use PDO;
 
 class AppConfig
 {
+    private array $config;
 
-    /**
-     * @var array
-     */
-    private $config;
-
-    /**
-     * @param array $configuration
-     */
-    public function __construct($configuration)
+    public function __construct(array $configuration)
     {
         $this->config = $configuration;
     }
 
-    /**
-     * @return mysqli
-     */
-    public function database()
+    public function database(): PDO
     {
         return EpeirosDatabase::getInstance($this->config['system']['database']);
     }

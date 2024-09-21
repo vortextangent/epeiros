@@ -1,6 +1,6 @@
 <?php
 
-namespace Epeiros\Events;
+namespace Vortextangent\Epeiros\Events;
 
 class EventSerializer
 {

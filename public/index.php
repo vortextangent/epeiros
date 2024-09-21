@@ -1,10 +1,11 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Http\Request;
+use Vortextangent\Epeiros\Http\Request;
 
 require __DIR__ . '/../src/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $configData  = require(__DIR__ . '/../src/configuration/config.php');
 

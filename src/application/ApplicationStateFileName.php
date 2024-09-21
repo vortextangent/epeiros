@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\Http\SessionId;
+use Vortextangent\Epeiros\Http\SessionId;
 
 class ApplicationStateFileName extends FileName
 {

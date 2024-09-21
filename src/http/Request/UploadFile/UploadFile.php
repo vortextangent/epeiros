@@ -1,12 +1,12 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Directory;
-use Epeiros\File;
-use Epeiros\FileName;
-use Epeiros\Filesize;
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\Directory;
+use Vortextangent\Epeiros\File;
+use Vortextangent\Epeiros\FileName;
+use Vortextangent\Epeiros\Filesize;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class UploadFile
 {

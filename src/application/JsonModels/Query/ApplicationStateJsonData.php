@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Query;
+namespace Vortextangent\Epeiros\Query;
 
-use Epeiros\Http\JsonData;
+use Vortextangent\Epeiros\Http\JsonData;
 
 class ApplicationStateJsonData implements JsonData
 {

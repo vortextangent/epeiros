@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\library\UUID;
+use Vortextangent\Epeiros\library\UUID;
 
 class SecurityToken extends UUID
 {

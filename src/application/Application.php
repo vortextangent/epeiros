@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros;
+namespace Vortextangent\Epeiros;
 
-use Epeiros\App\ApplicationState;
-use Epeiros\Http\Request;
+use Vortextangent\Epeiros\App\ApplicationState;
+use Vortextangent\Epeiros\Http\Request;
 
 class Application
 {

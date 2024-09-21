@@ -1,18 +1,12 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
 class ContentResponse extends AbstractResponse
 {
-    /**
-     * @var StatusHeader
-     */
-    private $statusHeader;
+    private StatusHeader $statusHeader;
 
-    /**
-     * @var Content
-     */
-    private $content;
+    private Content $content;
 
     /**
      * @param StatusHeader $statusHeader
@@ -21,27 +15,21 @@ class ContentResponse extends AbstractResponse
     public function __construct(StatusHeader $statusHeader, Content $content)
     {
         $this->statusHeader = $statusHeader;
-        $this->content      = $content;
+        $this->content = $content;
     }
 
-    protected function doSend()
+    protected function doSend(): void
     {
         $this->statusHeader->send();
         $this->content->send();
     }
 
-    /**
-     * @return StatusHeader
-     */
-    public function getStatusHeader()
+    public function getStatusHeader(): StatusHeader
     {
         return $this->statusHeader;
     }
 
-    /**
-     * @return Content
-     */
-    public function getContent()
+    public function getContent(): Content
     {
         return $this->content;
     }

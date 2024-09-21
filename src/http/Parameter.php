@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Library\CollectionElement;
+use Vortextangent\Epeiros\Library\CollectionElement;
 
 class Parameter implements CollectionElement
 {

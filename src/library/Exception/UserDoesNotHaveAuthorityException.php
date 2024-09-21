@@ -1,6 +1,6 @@
 <?php
 
-namespace Epeiros\Library;
+namespace Vortextangent\Epeiros\Library;
 
 class UserDoesNotHaveAuthorityException extends RuntimeException
 {

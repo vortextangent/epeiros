@@ -1,6 +1,6 @@
 <?php
 
-namespace Epeiros\library;
+namespace Vortextangent\Epeiros\library;
 
 class Name extends StringValueObject
 {

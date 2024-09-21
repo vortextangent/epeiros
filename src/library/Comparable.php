@@ -1,5 +1,5 @@
 <?php
-namespace Epeiros\library;
+namespace Vortextangent\Epeiros\library;
 
 interface Comparable
 {

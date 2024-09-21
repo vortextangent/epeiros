@@ -1,12 +1,9 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
 interface Query
 {
 
-    /**
-     * @return Response
-     */
-    public function execute();
+    public function execute(): Response;
 }

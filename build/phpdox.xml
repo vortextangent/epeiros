@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<phpdox xmlns="http://xml.phpdox.net/config">
-    <project name="atlis" source="../src" workdir="phpdox">
+<phpdox xmlns="http://xml.phpdox.net/config" silent="false">
+    <project name="epeiros" source="${basedir}/../src" workdir="${basedir}/documentation">
         <collector publiconly="false">
             <include mask="*.php"/>
             <exclude mask="*autoload.php"/>
         </collector>
 
-        <generator output=".">
-            <enrich base="logs">
+        <generator output="${basedir}/documentation">
+            <enrich base="${basedir}/logs">
                 <source type="build"/>
                 <source type="git"/>
                 <source type="phploc"/>
@@ -17,7 +17,8 @@
             </enrich>
 
             <build engine="html" enabled="true" output="api">
-                <file extension="html"/>
+                <template dir="${phpDox.home}/templates/html" />
+                <file extension="xhtml" />
             </build>
         </generator>
     </project>

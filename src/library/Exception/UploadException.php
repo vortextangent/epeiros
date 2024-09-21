@@ -2,7 +2,7 @@
 
 namespace Epieros\Exception;
 
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class UploadException extends RuntimeException
 {

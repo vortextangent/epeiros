@@ -1,8 +1,8 @@
 <?php
 
-namespace Epeiros\Events;
+namespace Vortextangent\Epeiros\Events;
 
-use Epeiros\Library\LogicException;
+use Vortextangent\Epeiros\Library\LogicException;
 
 class CorruptAggregateHistory extends LogicException implements EventsException
 {

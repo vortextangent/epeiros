@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\File;
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\File;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class FileContent implements Content
 {

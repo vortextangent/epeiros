@@ -1,9 +1,9 @@
 <?php
 
-namespace Epeiros\Http;
+namespace Vortextangent\Epeiros\Http;
 
-use Epeiros\Factory;
-use Epeiros\Library\RuntimeException;
+use Vortextangent\Epeiros\Factory;
+use Vortextangent\Epeiros\Library\RuntimeException;
 
 class RequestHandlerLocator
 {

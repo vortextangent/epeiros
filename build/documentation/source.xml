@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/Users/anthony.dacosta/repos/vortextangent/epeiros/src">
+    <dir name="configuration">
+      <file name="config.php" size="315" time="2024-09-19T21:40:27+00:00" unixtime="1726782027" sha1="124e72efd3b7ee69b0e12cceacd2dd02e0cccda2" xml="tokens/configuration/config.php.xml"/>
+    </dir>
+    <file name="server.php" size="930" time="2024-09-19T21:29:33+00:00" unixtime="1726781373" sha1="4f0a6dec4b43ac77c9b5b23e2f61d8ef8a621033" xml="tokens/server.php.xml"/>
+  </dir>
+</source>
