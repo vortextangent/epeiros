@@ -2,8 +2,13 @@
 
 namespace Vortextangent\Epeiros;
 
+use Throwable;
 use Vortextangent\Epeiros\App\ApplicationState;
+use Vortextangent\Epeiros\Http\ContentResponse;
+use Vortextangent\Epeiros\Http\ErrorStatusHeader;
+use Vortextangent\Epeiros\Http\JsonContent;
 use Vortextangent\Epeiros\Http\Request;
+use Vortextangent\Epeiros\Library\Exception;
 
 class Application
 {
@@ -33,17 +38,20 @@ class Application
 
             $handler = $requestHandlerLocator->locateHandler($request);
 
-            $response = $handler->handle($request);
-
-            return $response;
-        } catch (\Exception $e) {
+            return $handler->handle($request);
+        } catch (Exception $e) {
             //log and display 500 error page
             $logFile = __DIR__ . '/logs/eperios.application.log';
-            $data    = "[EXCEPTION] " . $e->getCode() . ': ' . $e->getMessage() .
-                       "\nTrace:" . $e->getTraceAsString() . "\n";
+            $data = "[EXCEPTION] " . $e->getCode() . ': ' . $e->getMessage() .
+                "\nTrace:" . $e->getTraceAsString() . "\n";
             file_put_contents($logFile, $data, FILE_APPEND);
 
-            throw $e;
+            $content = json_encode([
+                'status' => 'error',
+                'message' => $e->getMessage(),
+            ]);
+
+            return new ContentResponse(new ErrorStatusHeader($e->getCode()), new JsonContent($content));
         }
     }
 }

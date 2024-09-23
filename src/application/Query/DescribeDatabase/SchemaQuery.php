@@ -10,6 +10,7 @@ use Vortextangent\Epeiros\Http\JsonSerializableObject;
 use Vortextangent\Epeiros\Http\OkStatusHeader;
 use Vortextangent\Epeiros\Http\Query;
 use Vortextangent\Epeiros\Http\Response;
+use Vortextangent\Epeiros\Library\MissingParameterException;
 use Vortextangent\Epeiros\Library\NotFoundInCollectionException;
 
 class SchemaQuery implements Query
@@ -42,9 +43,9 @@ class SchemaQuery implements Query
     private function assertRequestIsValid(GetRequest $request)
     {
         try {
-            $this->request->getParameterByName('table');
+            $request->getParameterByName('table');
         } catch (NotFoundInCollectionException $exception) {
-
+            throw new MissingParameterException("No table specified", 400);
         }
     }
 }
